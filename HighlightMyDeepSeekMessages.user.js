@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Highlight My DeepSeek Messages 2.0
+// @name         Highlight My DeepSeek Messages
 // @namespace    http://tampermonkey.net/
-// @version      2.0
-// @description  Выделяет мои сообщения в переписке DeepSeek светло-серым цветом
-// @author       You
+// @version      1.0
+// @description  Highlight my messages in DeepSeek chat
+// @author       taskany
 // @match        https://chat.deepseek.com/*
 // @match        https://*.deepseek.com/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/taskany/userscripts/main/scripts/HighlightMyDeepSeekMessages.js
-// @downloadURL  https://raw.githubusercontent.com/taskany/userscripts/main/scripts/HighlightMyDeepSeekMessages.js
+// @updateURL    https://cdn.jsdelivr.net/gh/taskany/userscripts@main/HighlightMyDeepSeekMessages.user.js
+// @downloadURL  https://cdn.jsdelivr.net/gh/taskany/userscripts@main/HighlightMyDeepSeekMessages.user.js
 // ==/UserScript==
 
 (function() {
