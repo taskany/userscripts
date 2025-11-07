@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         iOSAutoUpdate
+// @name         iOSAutoUpdate1
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Частая проверка обновлений на iOS
