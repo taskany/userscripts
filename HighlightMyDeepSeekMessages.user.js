@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Highlight My DeepSeek Messages 2.0
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      2.0
 // @description  Выделяет мои сообщения в переписке DeepSeek светло-серым цветом
 // @author       You
 // @match        https://chat.deepseek.com/*
