@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Highlight My DeepSeek Messages
+// @name         Highlight My DeepSeek Messages 666
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      2.0
 // @description  Highlight my messages in DeepSeek chat
 // @author       taskany
 // @match        https://chat.deepseek.com/*
