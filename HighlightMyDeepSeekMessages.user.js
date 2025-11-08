@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Highlight My DeepSeek Messages 777
+// @name         Highlight My DeepSeek Messages 111
 // @namespace    http://tampermonkey.net/
 // @version      3.0
 // @description  Highlight my messages in DeepSeek chat
