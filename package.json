@@ -1,0 +1,11 @@
+{
+    "name": "tampermonkey-scripts",
+    "version": "1.0.0",
+    "scripts": {
+        "sync": "git add . && git commit -m 'Auto-update: HighlightMyDeepSeekMessages' && git push origin main",
+        "watch": "nodemon --watch HighlightMyDeepSeekMessages.user.js --exec 'npm run sync'"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.0"
+    }
+}
