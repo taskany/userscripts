@@ -1,0 +1,29 @@
+name: Script Sync Check
+on:
+  push:
+    paths:
+      - 'HighlightMyDeepSeekMessages.user.js'
+
+jobs:
+  sync-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+      - name: Create update log
+        run: |
+          echo "Last script update: $(date)" > last-update.txt
+          
+      - name: Commit and push changes
+        run: |
+          git add last-update.txt
+          git commit -m "Update timestamp: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git push
