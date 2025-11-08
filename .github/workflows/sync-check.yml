@@ -3,19 +3,27 @@ on:
   push:
     paths:
       - 'HighlightMyDeepSeekMessages.user.js'
-  schedule:
-    - cron: '*/5 * * * *' # Каждые 5 минут
 
 jobs:
-  check-updates:
+  sync-notification:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Check for script changes
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Git
         run: |
-          echo "Scripts updated at $(date)" >> sync.log
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Auto-sync: HighlightMyDeepSeekMessages" || echo "No changes to commit"
+          
+      - name: Create update log
+        run: |
+          echo "Last script update: $(date)" > last-update.txt
+          
+      - name: Commit and push changes
+        run: |
+          git add last-update.txt
+          git commit -m "Update timestamp: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
           git push
